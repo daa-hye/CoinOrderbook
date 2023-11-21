@@ -11,6 +11,7 @@
 		5375C8382B0B00070039DB75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375C8372B0B00070039DB75 /* ContentView.swift */; };
 		5375C83A2B0B00090039DB75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5375C8392B0B00090039DB75 /* Assets.xcassets */; };
 		5375C83D2B0B00090039DB75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5375C83C2B0B00090039DB75 /* Preview Assets.xcassets */; };
+		5375C85E2B0C347B0039DB75 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5375C85D2B0C347B0039DB75 /* Money.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5375C8372B0B00070039DB75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5375C8392B0B00090039DB75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5375C83C2B0B00090039DB75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5375C85D2B0C347B0039DB75 /* Money.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				5375C8352B0B00070039DB75 /* CoinOrderbookApp.swift */,
 				5375C8372B0B00070039DB75 /* ContentView.swift */,
+				5375C85D2B0C347B0039DB75 /* Money.swift */,
 				5375C8392B0B00090039DB75 /* Assets.xcassets */,
 				5375C83B2B0B00090039DB75 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5375C85E2B0C347B0039DB75 /* Money.swift in Sources */,
 				5375C8382B0B00070039DB75 /* ContentView.swift in Sources */,
 				5375C8362B0B00070039DB75 /* CoinOrderbookApp.swift in Sources */,
 			);
