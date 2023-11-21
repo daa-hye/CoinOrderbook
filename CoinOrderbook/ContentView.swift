@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var banner = "73,234,634,944원"
+    @State private var banner = 0
 
     var body: some View {
         NavigationStack {
@@ -17,14 +17,15 @@ struct ContentView: View {
                 VStack {
                     bannerView()
                     LazyVStack {
-                        ForEach(1..<50) { data in
+                        ForEach(dummy) { data in
                             listView(data)
                         }
                     }
                 }
             }
             .refreshable { // iOS15+
-                banner = "54,753,235원"
+                banner = 0
+                dummy.shuffle()
             }
             .navigationTitle("My Wallet")
         }
@@ -40,7 +41,7 @@ struct ContentView: View {
                 Spacer()
                 Text("나의 코인")
                     .foregroundStyle(.white)
-                Text(banner)
+                Text("\(banner)")
                     .foregroundStyle(.white)
             }
             .padding()
@@ -49,14 +50,16 @@ struct ContentView: View {
         .padding()
     }
 
-    func listView(_ data: Int) -> some View {
+    func listView(_ data: Money) -> some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("\(data) 코인")
-                Text("\(data) coin")
+                Text("\(data.product)")
+                    .bold()
+                Text("\(data.category.rawValue)")
+                    .foregroundStyle(.gray)
             }
             Spacer()
-            Text("KRW-BTC")
+            Text("\(data.amountFormat)")
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 8)
