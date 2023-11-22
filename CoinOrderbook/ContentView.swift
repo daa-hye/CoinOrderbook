@@ -16,16 +16,11 @@ struct ContentView: View {
             ScrollView {
                 VStack {
                     bannerView()
-                    LazyVStack {
-                        ForEach(dummy) { data in
-                            listView(data)
-                        }
-                    }
+                    ListView()
                 }
             }
             .refreshable { // iOS15+
                 banner = 0
-                dummy.shuffle()
             }
             .navigationTitle("My Wallet")
         }
@@ -50,20 +45,6 @@ struct ContentView: View {
         .padding()
     }
 
-    func listView(_ data: Money) -> some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text("\(data.product)")
-                    .bold()
-                Text("\(data.category.rawValue)")
-                    .foregroundStyle(.gray)
-            }
-            Spacer()
-            Text("\(data.amountFormat)")
-        }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 8)
-    }
 }
 
 #Preview {
